@@ -20,7 +20,7 @@ namespace Day4_01._12
 
         static void Main(string[] args)
         {
-            Randomness();
+            FileInputOutput();
         }
 
         /**===========================*
@@ -37,6 +37,19 @@ namespace Day4_01._12
             string[] contents = File.ReadAllLines(@"..\..\namesave.txt"); //Relative file path
                                                                           //Absolute file path @"C:/namesave.txt"
             Console.WriteLine(string.Join(", ", contents));
+            
+            //Reading incrementally through a file
+            StreamReader sr = new StreamReader(@"..\..\namesave.txt");
+            string line = sr.ReadLine();
+            string line2 = sr.ReadLine();
+
+            sr.Close(); //File is no longer being used by this StreamReader
+
+            
+
+            Console.WriteLine($"First Line: {line} \n" +
+                $"Second Line: {line2}");
+
 
         }
 
