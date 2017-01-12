@@ -78,6 +78,32 @@ namespace Day3_01._11
             return Console.ReadLine();
         }
 
+        /**===========================*
+            *          TRYPARSE           *
+            *============================**/
+        /*
+         * TryParse() accepts a string, attempts to convert to an integer and pass it back 
+         * (just like Parse()),
+         * but instead of breaking if the string isn't a number, then it will pass a bool
+        */
+        public static void TryParse()
+        {
 
+            string[] items = { "1", "2", "3" };
+            int input = 0;
+            items[input] = "X";
+
+            //int num = int.Parse(items[0]); //Error: input string is not in the correct format
+
+            //Can use lines 47-50 OR TryParse (lines 53-54)
+            if (items[input] == "X" || items[input] == "O")
+            {
+                Console.WriteLine("Invalid");
+            }
+
+            int result;
+            bool valid = int.TryParse(items[input], out result);
+
+        }
     }
 }
