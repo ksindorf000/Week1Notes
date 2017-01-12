@@ -20,7 +20,7 @@ namespace Day4_01._12
 
         static void Main(string[] args)
         {
-            Lists();
+            Randomness();
         }
 
         /**===========================*
@@ -76,8 +76,30 @@ namespace Day4_01._12
         *         RANDOM NUMS         *
         *============================**/
         /*
-         *
+         * Pseudo-random method
         */
+        public static void Randomness()
+        {
+
+            var myList = new List<string>()
+            { 
+                "joel", "peanut", "lincoln",
+                "michael", "andrew", "nathan"
+            };
+
+            //Create an object of type Random
+            var rng = new Random();
+
+            for (int i = 0; i < 4; i ++)
+            {
+                //Remember Next() is 0-based when using an int for boundaries
+                        //For a range, use rng.Next(100, 400);
+                int randomNum = rng.Next(myList.Count); 
+                Console.WriteLine(myList[randomNum]);
+            }
+            
+
+        }
 
     }
 
@@ -91,6 +113,11 @@ namespace Day4_01._12
      * "Programs are just collections of bugs that don't exist yet."
      * 
      * <T>: unspecified type 
+     * 
+     * Methods that have multiple method signatures are available because of 
+     * "method overload"
+     *              Next(10); //Up to 10
+     *              Next(10, 50); //From 10 to 50
     */
 
 }
