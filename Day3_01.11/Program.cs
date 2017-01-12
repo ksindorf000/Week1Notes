@@ -6,6 +6,34 @@ using System.Threading.Tasks;
 
 namespace Day3_01._11
 {
+
+    /**===========================*
+     *           METHODS          *
+     *============================**/
+    /*
+     * A method is a group of code that can be accessed by name.
+     * static string ThisMethod (string myString)
+     *      static = 
+     *      string = data type of returned value, use "void" if no return
+     *      ThisMethod = name of the method
+     *      (string myString) = Method Signature
+     *          declares parameters that are accepted as arguments
+    */
+
+    /*
+     * Parameter: variable expected by a method (reservation at a restaraunt)
+     *      Available to a method definition:
+     *          static string ThisMethod (type parameter)
+     * Argument: variable passed to a method (guest fulfilling reservation)
+     *      Given to a method:
+     *          ThisMethod(argument);
+     */
+
+    /*
+     * Scope: each method has it's own "scope" or information that 
+     * is only available to that particular method
+     */
+
     class Program
     {
         static void Main(string[] args)
@@ -50,32 +78,6 @@ namespace Day3_01._11
             return Console.ReadLine();
         }
 
-        /**===========================*
-         *           METHODS          *
-         *============================**/
-        /*
-         * A method is a group of code that can be accessed by name.
-         * static string ThisMethod (string myString)
-         *      static = 
-         *      string = data type of returned value, use "void" if no return
-         *      ThisMethod = name of the method
-         *      (string myString) = Method Signature
-         *          declares parameters that are accepted as arguments
-        */
-
-        /*
-         * Scope: each method has it's own "scope" or information that 
-         * is only available to that particular method
-         */
-
-        /*
-         * Parameter: variable expected by a method (reservation at a restaraunt)
-         *      Available to a method definition:
-         *          static string ThisMethod (type parameter)
-         * Argument: variable passed to a method (guest fulfilling reservation)
-         *      Given to a method:
-         *          ThisMethod(argument);
-         */
 
     }
 }
